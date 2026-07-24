@@ -26,22 +26,6 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --green: #16a34a;
-      --green-dark: #15803d;
-      --green-glow: rgba(22, 163, 74, 0.25);
-      --gold: #ca8a04;
-      --gold-light: #eab308;
-      --gold-dark: #854d0e;
-      --gold-glow: rgba(202, 138, 4, 0.25);
-      --bg: #f8fafc;
-      --bg-card: #ffffff;
-      --text: #1e293b;
-      --text-dim: #64748b;
-      --radius: 16px;
-      --radius-sm: 8px;
-    }
-
-    [data-theme="dark"] {
       --green: #4ade80;
       --green-dark: #22c55e;
       --green-glow: rgba(74, 222, 128, 0.2);
@@ -53,6 +37,8 @@
       --bg-card: #111827;
       --text: #f1f5f9;
       --text-dim: #94a3b8;
+      --radius: 16px;
+      --radius-sm: 8px;
     }
 
     html { scroll-behavior: smooth; }
@@ -193,8 +179,8 @@
     .top-bar {
       position: relative;
       z-index: 100;
-      background: #ffffff;
-      border-bottom: 1px solid #e2e8f0;
+      background: #0f172a;
+      border-bottom: 1px solid #1e293b;
       padding: 0.5rem 1rem;
     }
 
@@ -209,21 +195,20 @@
 
     .btn-secondary {
       padding: 0.5rem 1.5rem;
-      background: #f1f5f9;
+      background: #1e293b;
       color: var(--text);
       text-decoration: none;
       border-radius: var(--radius-sm);
       font-weight: 600;
       font-size: 13px;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #334155;
       transition: all 0.3s;
       cursor: pointer;
       font-family: inherit;
     }
 
     .btn-secondary:hover {
-      background: #e2e8f0;
-      border-color: #cbd5e1;
+      background: #334155;
       transform: translateY(-1px);
     }
 
@@ -231,9 +216,9 @@
       position: sticky;
       top: 0;
       z-index: 99;
-      background: rgba(255,255,255,0.92);
+      background: rgba(15,23,42,0.92);
       backdrop-filter: blur(16px);
-      border-bottom: 1px solid #e2e8f0;
+      border-bottom: 1px solid #1e293b;
       padding: 0.75rem 1rem;
     }
 
@@ -246,7 +231,7 @@
       padding: 0 1rem;
     }
 
-    .logo img { max-height: 48px; width: auto; display: block; }
+    .logo img { max-height: 48px; width: auto; display: block; filter: brightness(1.2); }
 
     .nav-menu { display: flex; align-items: center; gap: 2rem; }
 
@@ -276,18 +261,6 @@
 
     .menu-toggle { color: var(--text); }
     .nav-links a:hover::after { width: 100%; }
-
-    .theme-toggle {
-      width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e2e8f0;
-      background: #f1f5f9; color: #64748b; font-size: 18px; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: all 0.3s; font-family: inherit; line-height: 1;
-    }
-
-    .theme-toggle:hover { background: #e2e8f0; color: var(--text); }
-
-    [data-theme="dark"] .theme-toggle { border-color: #334155; background: #1e293b; color: #fbbf24; }
-    [data-theme="dark"] .theme-toggle:hover { background: #334155; }
 
     .btn-download-nav {
       padding: 0.6rem 1.5rem;
@@ -471,8 +444,8 @@
     }
 
     .gift-code {
-      background: linear-gradient(135deg, #fffbeb, #fefce8);
-      border: 1px solid #fde68a;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border: 1px solid #334155;
       padding: 2.5rem;
       border-radius: var(--radius);
       text-align: center;
@@ -481,23 +454,23 @@
 
     .gift-code h2 {
       font-size: 1.3rem;
-      color: var(--gold-dark);
+      color: var(--gold);
       margin-bottom: 0.5rem;
     }
 
     .code {
       font-family: 'Courier New', monospace;
       font-size: clamp(0.9rem, 2vw, 1.3rem);
-      background: #ffffff;
-      border: 2px solid #fde68a;
+      background: #0f172a;
+      border: 2px solid #334155;
       padding: 1.2rem 1.5rem;
       border-radius: var(--radius-sm);
       margin: 1rem 0 0;
       word-break: break-all;
-      color: var(--gold-dark);
+      color: var(--gold);
       letter-spacing: 2px;
       display: inline-block;
-      box-shadow: 0 2px 8px rgba(202,138,4,0.1);
+      box-shadow: 0 2px 8px rgba(251,191,36,0.1);
       animation: pulseGlow 3s ease-in-out infinite;
     }
 
@@ -509,11 +482,11 @@
 
     .info-table td {
       padding: 1rem 1.5rem;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #1e293b;
       font-size: 14px;
     }
 
-    .info-table tr:nth-child(even) { background: #f8fafc; }
+    .info-table tr:nth-child(even) { background: #0f172a; }
 
     .info-table td:first-child { color: var(--text-dim); font-weight: 500; }
     .info-table td:last-child { color: var(--text); font-weight: 600; }
@@ -521,7 +494,7 @@
     details.toc-container {
       margin: 2rem 0;
       background: var(--bg-card);
-      border: 1px solid #e2e8f0;
+      border: 1px solid #1e293b;
       padding: 0;
       border-radius: var(--radius);
     }
@@ -535,7 +508,7 @@
       display: flex;
       align-items: center;
       color: var(--text);
-      background: #f8fafc;
+      background: #0f172a;
     }
 
     summary.toc-title::-webkit-details-marker { display: none; }
@@ -553,7 +526,7 @@
     .toc-list {
       list-style: none;
       padding: 0 1.5rem 1.5rem;
-      border-top: 1px solid #e2e8f0;
+      border-top: 1px solid #1e293b;
     }
 
     .toc-list li { margin-bottom: 0.7rem; font-size: 14px; }
@@ -586,14 +559,14 @@
       padding: 2.5rem;
       border-radius: var(--radius);
       margin: 1.5rem 0;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #1e293b;
       box-shadow: 0 1px 3px rgba(0,0,0,0.04);
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
 
     .step-card:hover {
       border-color: var(--green);
-      box-shadow: 0 4px 12px rgba(22,163,74,0.08);
+      box-shadow: 0 4px 12px rgba(74,222,128,0.08);
       transform: translateY(-2px);
     }
 
@@ -617,7 +590,7 @@
     .step-card ul li { color: var(--text-dim); margin-bottom: 0.5rem; font-size: 15px; }
     .step-card ul li b { color: var(--text); }
 
-    .step-card img { border: 1px solid #e2e8f0; }
+    .step-card img { border: 1px solid #1e293b; }
 
     .step-card img {
       display: block;
@@ -634,7 +607,7 @@
       background: var(--bg-card);
       margin-bottom: 0.75rem;
       border-radius: var(--radius-sm);
-      border: 1px solid #e2e8f0;
+      border: 1px solid #1e293b;
     }
 
     summary {
@@ -762,25 +735,6 @@
       .step-card { padding: 1.5rem; }
     }
 
-    [data-theme="dark"] .top-bar { background: #0f172a; border-color: #1e293b; }
-    [data-theme="dark"] .btn-secondary { background: #1e293b; border-color: #334155; color: var(--text); }
-    [data-theme="dark"] .btn-secondary:hover { background: #334155; }
-    [data-theme="dark"] .header { background: rgba(15,23,42,0.92); border-color: #1e293b; }
-    [data-theme="dark"] .logo img { filter: brightness(1.2); }
-    [data-theme="dark"] .step-card { border-color: #1e293b; }
-    [data-theme="dark"] .step-card:hover { border-color: var(--green); }
-    [data-theme="dark"] .step-card img { border-color: #1e293b; }
-    [data-theme="dark"] details { border-color: #1e293b; }
-    [data-theme="dark"] summary.toc-title { background: #0f172a; }
-    [data-theme="dark"] .toc-list { border-color: #1e293b; }
-    [data-theme="dark"] details.toc-container { border-color: #1e293b; }
-    [data-theme="dark"] .info-table td { border-color: #1e293b; }
-    [data-theme="dark"] .info-table tr:nth-child(even) { background: #0f172a; }
-    [data-theme="dark"] .gift-code { background: linear-gradient(135deg, #1a1a2e, #16213e); border-color: #334155; }
-    [data-theme="dark"] .gift-code h2 { color: var(--gold); }
-    [data-theme="dark"] .code { background: #0f172a; border-color: #334155; color: var(--gold); }
-    [data-theme="dark"] .faq-answer { color: var(--text-dim); }
-
     @media (prefers-reduced-motion: reduce) {
       .coin, .coin::after, .winner-figure .trophy,
       .winner-figure .sparkle-1, .winner-figure .sparkle-2, .winner-figure .sparkle-3 { animation: none !important; }
@@ -841,7 +795,6 @@
           <a href="responsible-gaming/">Responsible Gaming</a>
         </div>
         <div class="header-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9789;</button>
           <button class="btn-download-nav new-tab" x-data="aHR0cHM6Ly8xMDB4d2luLmNvbS9hcHAvMTAweHdpbi1hcGsuYXBr">Download App</button>
         </div>
       </div>
@@ -1210,17 +1163,6 @@
       const navMenu = document.querySelector(".nav-menu");
       menuToggle.addEventListener("click", () => { navMenu.classList.toggle("active"); });
 
-      const themeToggle = document.getElementById("themeToggle");
-      const savedTheme = localStorage.getItem("theme") || "light";
-      document.documentElement.setAttribute("data-theme", savedTheme);
-      themeToggle.textContent = savedTheme === "dark" ? "&#9788;" : "&#9789;";
-      themeToggle.addEventListener("click", () => {
-        const current = document.documentElement.getAttribute("data-theme");
-        const next = current === "dark" ? "light" : "dark";
-        document.documentElement.setAttribute("data-theme", next);
-        localStorage.setItem("theme", next);
-        themeToggle.textContent = next === "dark" ? "&#9788;" : "&#9789;";
-      });
     });
   </script>
 </body>
