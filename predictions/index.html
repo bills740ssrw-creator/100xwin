@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Today's colour predictions for 100xwin. Get expert tips on red, green, and blue predictions to maximize your winnings." />
+  <title>Predictions - 100xwin</title>
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="../images/100xwin-logo-square.svg" sizes="32x32" />
+  <link rel="icon" href="../images/100xwin-logo-square.svg" sizes="192x192" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --green: #16a34a; --green-dark: #15803d; --green-glow: rgba(22,163,74,0.25);
+      --gold: #ca8a04; --gold-light: #eab308; --gold-dark: #854d0e; --gold-glow: rgba(202,138,4,0.25);
+      --bg: #f8fafc; --bg-card: #ffffff; --text: #1e293b; --text-dim: #64748b;
+      --radius: 16px; --radius-sm: 8px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6; color: var(--text); background: var(--bg); overflow-x: hidden; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(22,163,74,0.06), transparent),
+                  radial-gradient(ellipse 60% 40% at 80% 100%, rgba(202,138,4,0.04), transparent);
+      pointer-events: none; z-index: -1;
+    }
+    .top-bar { background: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 0.5rem 1rem; }
+    .top-bar-content { display: flex; justify-content: flex-end; align-items: center; gap: 0.75rem; max-width: 1200px; margin: 0 auto; }
+    .btn-secondary {
+      padding: 0.5rem 1.5rem; background: #f1f5f9; color: var(--text); border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 13px; border: 1px solid #e2e8f0; transition: all 0.3s; cursor: pointer; font-family: inherit;
+    }
+    .btn-secondary:hover { background: #e2e8f0; transform: translateY(-1px); }
+    .header { position: sticky; top: 0; z-index: 99; background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid #e2e8f0; padding: 0.75rem 1rem; }
+    .nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    .logo img { max-height: 48px; width: auto; display: block; }
+    .nav-menu { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { color: var(--text-dim); text-decoration: none; font-weight: 500; font-size: 14px; transition: color 0.3s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--green); transition: width 0.3s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--green); }
+    .nav-links a.active::after { width: 100%; }
+    .btn-download-nav {
+      padding: 0.6rem 1.5rem; background: linear-gradient(135deg, var(--green), var(--green-dark)); color: white;
+      border-radius: 50px; font-weight: 700; font-size: 13px; border: none; cursor: pointer; transition: all 0.3s;
+      font-family: inherit; box-shadow: 0 4px 15px var(--green-glow);
+    }
+    .btn-download-nav:hover { transform: scale(1.05); box-shadow: 0 6px 25px var(--green-glow); }
+    .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text); }
+
+    .page-header { text-align: center; padding: 3rem 1rem 2rem; position: relative; z-index: 1; }
+    .page-header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 0.5rem; }
+    .page-header h1 span { background: linear-gradient(135deg, var(--green), #22c55e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-header p { color: var(--text-dim); max-width: 600px; margin: 0 auto; font-size: 15px; }
+
+    .main { max-width: 1200px; margin: 0 auto; padding: 0 1rem 4rem; position: relative; z-index: 1; }
+
+    .prediction-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+
+    .prediction-card {
+      background: var(--bg-card); border-radius: var(--radius); padding: 1.5rem;
+      border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .prediction-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+
+    .prediction-card .game-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .prediction-card .game-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .prediction-card .game-time { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 1rem; }
+
+    .colour-pick {
+      display: flex; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .colour-pick .dot {
+      width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700; color: white; text-transform: uppercase;
+    }
+    .dot.red { background: linear-gradient(135deg, #ef4444, #dc2626); box-shadow: 0 2px 8px rgba(239,68,68,0.3); }
+    .dot.green { background: linear-gradient(135deg, var(--green), var(--green-dark)); box-shadow: 0 2px 8px var(--green-glow); }
+    .dot.blue { background: linear-gradient(135deg, #3b82f6, #2563eb); box-shadow: 0 2px 8px rgba(59,130,246,0.3); }
+    .dot.purple { background: linear-gradient(135deg, #a855f7, #9333ea); box-shadow: 0 2px 8px rgba(168,85,247,0.3); }
+    .dot.violet { background: linear-gradient(135deg, #8b5cf6, #7c3aed); box-shadow: 0 2px 8px rgba(139,92,246,0.3); }
+    .dot.gold { background: linear-gradient(135deg, var(--gold-light), var(--gold-dark)); box-shadow: 0 2px 8px var(--gold-glow); }
+
+    .prediction-stats { display: flex; gap: 1rem; padding-top: 1rem; border-top: 1px solid #f1f5f9; }
+    .prediction-stats .stat { text-align: center; flex: 1; }
+    .prediction-stats .stat-value { font-size: 1.1rem; font-weight: 800; }
+    .prediction-stats .stat-value.up { color: var(--green); }
+    .prediction-stats .stat-value.down { color: #ef4444; }
+    .prediction-stats .stat-label { font-size: 0.75rem; color: var(--text-dim); }
+
+    .confidence-bar { height: 4px; border-radius: 2px; background: #f1f5f9; margin: 0.75rem 0; overflow: hidden; }
+    .confidence-bar .fill { height: 100%; border-radius: 2px; transition: width 1s ease; }
+    .confidence-bar .fill.high { background: linear-gradient(90deg, var(--green), #22c55e); width: 85%; }
+    .confidence-bar .fill.medium { background: linear-gradient(90deg, var(--gold), var(--gold-light)); width: 65%; }
+    .confidence-bar .fill.low { background: linear-gradient(90deg, #f97316, #ef4444); width: 40%; }
+
+    .section-title {
+      font-size: 1.3rem; font-weight: 800; margin: 2.5rem 0 1rem;
+      background: linear-gradient(135deg, var(--text), var(--green));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    .tips-list { list-style: none; display: grid; gap: 0.75rem; }
+    .tips-list li {
+      background: var(--bg-card); padding: 1rem 1.25rem; border-radius: var(--radius-sm);
+      border: 1px solid #e2e8f0; font-size: 14px; color: var(--text-dim);
+      display: flex; align-items: flex-start; gap: 0.75rem;
+    }
+    .tips-list li .num {
+      width: 26px; height: 26px; border-radius: 50%; background: rgba(22,163,74,0.1);
+      display: flex; align-items: center; justify-content: center; font-size: 13px;
+      font-weight: 700; color: var(--green); flex-shrink: 0;
+    }
+
+    .footer { background: #1e293b; padding: 4rem 1rem 2rem; margin-top: 4rem; }
+    .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; }
+    .footer-section h3 { color: #fff; font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-section ul { list-style: none; }
+    .footer-section li { margin-bottom: 0.5rem; }
+    .footer-section a { color: #94a3b8; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+    .footer-section a:hover { color: var(--green); }
+    .footer-section p { color: #94a3b8; font-size: 14px; }
+    .footer-bottom { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #334155; color: #64748b; font-size: 13px; }
+    .footer-bottom a { color: #e2e8f0; text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .nav-menu { display: none; flex-direction: column; width: 100%; position: absolute; top: 64px; left: 0; background: #ffffff; padding: 1.5rem; border-bottom: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+      .nav-menu.active { display: flex; }
+      .nav-links { flex-direction: column; width: 100%; gap: 1rem; }
+      .menu-toggle { display: block; }
+      .nav { flex-wrap: wrap; }
+      .prediction-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .top-bar-content { flex-direction: column; }
+      .btn-secondary { width: 100%; text-align: center; }
+      .colour-pick { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <button class="btn-secondary">Login</button>
+      <button class="btn-secondary">Register</button>
+      <button style="background:linear-gradient(135deg,#0284c7,#0369a1);color:white;border:none;padding:10px 20px;font-size:14px;border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit;box-shadow:0 2px 8px rgba(2,132,199,0.2);">
+        <a href="https://t.me/100xwin" target="_blank" rel="nofollow" style="color:white;text-decoration:none;">Join Telegram</a>
+      </button>
+    </div>
+  </div>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo"><a href="../"><img src="../images/100xwin-logo.svg" alt="100xwin Logo" width="280" height="80" /></a></div>
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="../">Home</a>
+          <a href="../predictions/" class="active">Predictions</a>
+          <a href="../blog/">Blog</a>
+          <a href="../contact-us/">Contact Us</a>
+          <a href="../responsible-gaming/">Responsible Gaming</a>
+        </div>
+        <div class="header-actions">
+          <button class="btn-download-nav">Download App</button>
+        </div>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h1>Today's <span>Predictions</span></h1>
+    <p>Expert colour predictions and winning tips for 100xwin. Updated daily.</p>
+  </div>
+
+  <main class="main">
+    <h2 class="section-title">Live Predictions</h2>
+    <div class="prediction-grid">
+      <div class="prediction-card">
+        <div class="game-icon">🎯</div>
+        <div class="game-name">WinGo 1 Minute</div>
+        <div class="game-time">Next round: 30s</div>
+        <div class="colour-pick">
+          <div class="dot green">Green</div>
+          <div class="dot red">Red</div>
+        </div>
+        <div class="confidence-bar"><div class="fill high"></div></div>
+        <div class="prediction-stats">
+          <div class="stat"><div class="stat-value up">85%</div><div class="stat-label">Confidence</div></div>
+          <div class="stat"><div class="stat-value">2.3x</div><div class="stat-label">Payout</div></div>
+          <div class="stat"><div class="stat-value up">+12</div><div class="stat-label">Streak</div></div>
+        </div>
+      </div>
+
+      <div class="prediction-card">
+        <div class="game-icon">🎲</div>
+        <div class="game-name">WinGo 3 Minute</div>
+        <div class="game-time">Next round: 1m 45s</div>
+        <div class="colour-pick">
+          <div class="dot violet">Violet</div>
+          <div class="dot red">Red</div>
+          <div class="dot green">Green</div>
+        </div>
+        <div class="confidence-bar"><div class="fill medium"></div></div>
+        <div class="prediction-stats">
+          <div class="stat"><div class="stat-value up">65%</div><div class="stat-label">Confidence</div></div>
+          <div class="stat"><div class="stat-value">4.5x</div><div class="stat-label">Payout</div></div>
+          <div class="stat"><div class="stat-value up">+5</div><div class="stat-label">Streak</div></div>
+        </div>
+      </div>
+
+      <div class="prediction-card">
+        <div class="game-icon">🎰</div>
+        <div class="game-name">WinGo 5 Minute</div>
+        <div class="game-time">Next round: 3m 12s</div>
+        <div class="colour-pick">
+          <div class="dot blue">Blue</div>
+          <div class="dot gold">Gold</div>
+        </div>
+        <div class="confidence-bar"><div class="fill high"></div></div>
+        <div class="prediction-stats">
+          <div class="stat"><div class="stat-value up">78%</div><div class="stat-label">Confidence</div></div>
+          <div class="stat"><div class="stat-value">3.0x</div><div class="stat-label">Payout</div></div>
+          <div class="stat"><div class="stat-value up">+8</div><div class="stat-label">Streak</div></div>
+        </div>
+      </div>
+
+      <div class="prediction-card">
+        <div class="game-icon">🎯</div>
+        <div class="game-name">K3 Lottery</div>
+        <div class="game-time">Next draw: 5m 30s</div>
+        <div class="colour-pick">
+          <div class="dot red">Red</div>
+          <div class="dot green">Green</div>
+          <div class="dot purple">Purple</div>
+        </div>
+        <div class="confidence-bar"><div class="fill low"></div></div>
+        <div class="prediction-stats">
+          <div class="stat"><div class="stat-value up">55%</div><div class="stat-label">Confidence</div></div>
+          <div class="stat"><div class="stat-value">6.0x</div><div class="stat-label">Payout</div></div>
+          <div class="stat"><div class="stat-value down">-2</div><div class="stat-label">Streak</div></div>
+        </div>
+      </div>
+
+      <div class="prediction-card">
+        <div class="game-icon">🏏</div>
+        <div class="game-name">Cricket Betting</div>
+        <div class="game-time">Match: IND vs AUS</div>
+        <div class="colour-pick">
+          <div class="dot green">Green</div>
+          <div class="dot blue">Blue</div>
+        </div>
+        <div class="confidence-bar"><div class="fill medium"></div></div>
+        <div class="prediction-stats">
+          <div class="stat"><div class="stat-value up">62%</div><div class="stat-label">Confidence</div></div>
+          <div class="stat"><div class="stat-value">2.8x</div><div class="stat-label">Payout</div></div>
+          <div class="stat"><div class="stat-value up">+3</div><div class="stat-label">Streak</div></div>
+        </div>
+      </div>
+
+      <div class="prediction-card">
+        <div class="game-icon">🐟</div>
+        <div class="game-name">Fishing Game</div>
+        <div class="game-time">Hot streak active</div>
+        <div class="colour-pick">
+          <div class="dot gold">Gold</div>
+          <div class="dot violet">Violet</div>
+        </div>
+        <div class="confidence-bar"><div class="fill high"></div></div>
+        <div class="prediction-stats">
+          <div class="stat"><div class="stat-value up">82%</div><div class="stat-label">Confidence</div></div>
+          <div class="stat"><div class="stat-value">5.0x</div><div class="stat-label">Payout</div></div>
+          <div class="stat"><div class="stat-value up">+15</div><div class="stat-label">Streak</div></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Pro Tips</h2>
+    <ul class="tips-list">
+      <li><span class="num">1</span> Green has been hitting 72% of the time in the last 50 rounds of WinGo 1 Min.</li>
+      <li><span class="num">2</span> Avoid Violet in K3 Lottery this hour — pattern shows 3 consecutive losses.</li>
+      <li><span class="num">3</span> Gold in Fishing Game has a strong win rate during evening hours (6-9 PM).</li>
+      <li><span class="num">4</span> Start with small bets on Red in WinGo 3 Min to test the trend.</li>
+      <li><span class="num">5</span> Cricket betting — choose Green when India is batting first.</li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../predictions/">Predictions</a></li>
+          <li><a href="../responsible-gaming/">Responsible Gaming</a></li>
+          <li><a href="../become-an-agent/">Become An Agent</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../terms-conditions/">Terms & Conditions</a></li>
+          <li><a href="../disclaimer/">Disclaimer</a></li>
+          <li><a href="../about-us/">About Us</a></li>
+          <li><a href="../contact-us/">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <p>24/7 Customer Support</p>
+        <p>Email: support@100xwin.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 &middot; All Rights Reserved to <a href="../">100xwin</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        const t = document.querySelector(this.getAttribute("href"));
+        if (t) t.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+    document.querySelector(".menu-toggle")?.addEventListener("click", () => {
+      document.querySelector(".nav-menu")?.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
