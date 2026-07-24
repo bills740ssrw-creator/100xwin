@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Download the 100xwin app to play colour prediction games. Enjoy fast login, easy registration, thrilling gameplay, and exciting daily rewards. Start winning now!" />
-  <title>100xwin - Colour Prediction Game</title>
+  <meta name="description" content="Download the BDG WIN app to play colour prediction games. Enjoy fast login, easy registration, thrilling gameplay, and exciting daily rewards. Start winning now!" />
+  <title>BDG WIN - Colour Prediction Game</title>
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
-  <meta name="keywords" content="100xwin, 100xwin App Download, 100xwin Register, Colour Prediction Game" />
-  <link rel="canonical" href="https://100xwin.com/" />
-  <link rel="alternate" hreflang="en" href="https://100xwin.com/" />
-  <link rel="icon" href="images/100xwin-logo-square.svg" sizes="32x32" />
-  <link rel="icon" href="images/100xwin-logo-square.svg" sizes="192x192" />
-  <link rel="apple-touch-icon" href="images/100xwin-logo-square.svg" />
-  <meta name="msapplication-TileImage" content="images/100xwin-logo-square.svg" />
+  <meta name="keywords" content="BDG WIN, BDG WIN App Download, BDG WIN Register, Colour Prediction Game" />
+  <link rel="canonical" href="https://bdgwin.live/" />
+  <link rel="alternate" hreflang="en" href="https://bdgwin.live/" />
+  <link rel="icon" href="images/bdg-win-logo-square.svg" sizes="32x32" />
+  <link rel="icon" href="images/bdg-win-logo-square.svg" sizes="192x192" />
+  <link rel="apple-touch-icon" href="images/bdg-win-logo-square.svg" />
+  <meta name="msapplication-TileImage" content="images/bdg-win-logo-square.svg" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="100xwin" />
-  <meta property="og:description" content="Download the 100xwin app to play colour prediction games. Enjoy fast login, easy registration, thrilling gameplay, and exciting daily rewards. Start winning now!" />
-  <meta property="og:url" content="https://100xwin.com/" />
-  <meta property="og:image" content="images/100xwin-logo-square.svg" />
-  <link rel="preload" as="image" href="images/100xwin-logo.svg" />
+  <meta property="og:title" content="BDG WIN" />
+  <meta property="og:description" content="Download the BDG WIN app to play colour prediction games. Enjoy fast login, easy registration, thrilling gameplay, and exciting daily rewards. Start winning now!" />
+  <meta property="og:url" content="https://bdgwin.live/" />
+  <meta property="og:image" content="images/bdg-win-logo-square.svg" />
+  <link rel="preload" as="image" href="images/bdg-win-logo.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
@@ -39,6 +39,20 @@
       --text-dim: #64748b;
       --radius: 16px;
       --radius-sm: 8px;
+    }
+
+    [data-theme="dark"] {
+      --green: #4ade80;
+      --green-dark: #22c55e;
+      --green-glow: rgba(74, 222, 128, 0.2);
+      --gold: #fbbf24;
+      --gold-light: #fcd34d;
+      --gold-dark: #f59e0b;
+      --gold-glow: rgba(251, 191, 36, 0.2);
+      --bg: #0b1120;
+      --bg-card: #111827;
+      --text: #f1f5f9;
+      --text-dim: #94a3b8;
     }
 
     html { scroll-behavior: smooth; }
@@ -262,6 +276,18 @@
 
     .menu-toggle { color: var(--text); }
     .nav-links a:hover::after { width: 100%; }
+
+    .theme-toggle {
+      width: 36px; height: 36px; border-radius: 50%; border: 1px solid #e2e8f0;
+      background: #f1f5f9; color: #64748b; font-size: 18px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.3s; font-family: inherit; line-height: 1;
+    }
+
+    .theme-toggle:hover { background: #e2e8f0; color: var(--text); }
+
+    [data-theme="dark"] .theme-toggle { border-color: #334155; background: #1e293b; color: #fbbf24; }
+    [data-theme="dark"] .theme-toggle:hover { background: #334155; }
 
     .btn-download-nav {
       padding: 0.6rem 1.5rem;
@@ -736,6 +762,24 @@
       .step-card { padding: 1.5rem; }
     }
 
+    [data-theme="dark"] .top-bar { background: #0f172a; border-color: #1e293b; }
+    [data-theme="dark"] .btn-secondary { background: #1e293b; border-color: #334155; color: var(--text); }
+    [data-theme="dark"] .btn-secondary:hover { background: #334155; }
+    [data-theme="dark"] .header { background: rgba(15,23,42,0.92); border-color: #1e293b; }
+    [data-theme="dark"] .step-card { border-color: #1e293b; }
+    [data-theme="dark"] .step-card:hover { border-color: var(--green); }
+    [data-theme="dark"] .step-card img { border-color: #1e293b; }
+    [data-theme="dark"] details { border-color: #1e293b; }
+    [data-theme="dark"] summary.toc-title { background: #0f172a; }
+    [data-theme="dark"] .toc-list { border-color: #1e293b; }
+    [data-theme="dark"] details.toc-container { border-color: #1e293b; }
+    [data-theme="dark"] .info-table td { border-color: #1e293b; }
+    [data-theme="dark"] .info-table tr:nth-child(even) { background: #0f172a; }
+    [data-theme="dark"] .gift-code { background: linear-gradient(135deg, #1a1a2e, #16213e); border-color: #334155; }
+    [data-theme="dark"] .gift-code h2 { color: var(--gold); }
+    [data-theme="dark"] .code { background: #0f172a; border-color: #334155; color: var(--gold); }
+    [data-theme="dark"] .faq-answer { color: var(--text-dim); }
+
     @media (prefers-reduced-motion: reduce) {
       .coin, .coin::after, .winner-figure .trophy,
       .winner-figure .sparkle-1, .winner-figure .sparkle-2, .winner-figure .sparkle-3 { animation: none !important; }
@@ -745,7 +789,7 @@
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "100xwin",
+    "name": "BDG WIN",
     "operatingSystem": "Android",
     "applicationCategory": "GameApplication",
     "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "INR" },
@@ -777,7 +821,7 @@
       <button class="btn-secondary new-tab" x-data="aHR0cHM6Ly8xMDB4d2luLmNvbS8jLz9pbnZpdGF0aW9uQ29kZT0xMDBYV0lOMjAyNA==">Login</button>
       <button class="btn-secondary new-tab" x-data="aHR0cHM6Ly8xMDB4d2luLmNvbS8jLz9pbnZpdGF0aW9uQ29kZT0xMDBYV0lOMjAyNA==">Register</button>
       <button style="background:linear-gradient(135deg,#0284c7,#0369a1);color:white;border:none;padding:10px 20px;font-size:14px;border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit;box-shadow:0 2px 8px rgba(2,132,199,0.2);">
-        <a href="https://t.me/100xwin" target="_blank" rel="nofollow" style="color:white;text-decoration:none;">Join Telegram</a>
+        <a href="https://t.me/BDGWINMaxieAgentTeam_bo" target="_blank" rel="nofollow" style="color:white;text-decoration:none;">Join Telegram</a>
       </button>
     </div>
   </div>
@@ -785,7 +829,7 @@
   <header class="header">
     <nav class="nav">
       <div class="logo">
-        <a href=""><img src="images/100xwin-logo.svg" alt="100xwin Logo" width="280" height="80" loading="eager" /></a>
+        <a href=""><img src="images/bdg-win-logo.svg" alt="BDG WIN Logo" width="280" height="80" loading="eager" /></a>
       </div>
       <div class="nav-menu">
         <div class="nav-links">
@@ -796,6 +840,7 @@
           <a href="responsible-gaming/">Responsible Gaming</a>
         </div>
         <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">&#9789;</button>
           <button class="btn-download-nav new-tab" x-data="aHR0cHM6Ly8xMDB4d2luLmNvbS9hcHAvMTAweHdpbi1hcGsuYXBr">Download App</button>
         </div>
       </div>
@@ -813,13 +858,13 @@
         <span class="trophy">&#127942;</span>
       </div>
       <h1>
-        <span class="highlight-green">100xwin</span><br />
+        <span class="highlight-green">BDG WIN</span><br />
         Where Every<br />
         <span class="highlight-gold">Prediction Wins</span>
       </h1>
     </div>
     <p>
-      Welcome to <strong>100xwin</strong> — the colour prediction game trusted by millions.
+      Welcome to <strong>BDG WIN</strong> — the colour prediction game trusted by millions.
       Fast login, thrilling gameplay, daily rewards, and unlimited winning potential.
       Click <strong>Download</strong> and start your winning streak.
     </p>
@@ -832,15 +877,15 @@
   </section>
 
   <main class="main">
-    <section class="gift-code" id="100xwin-gift">
+    <section class="gift-code" id="bdg-win-gift">
       <h2>Daily Gift Code</h2>
       <p style="color:var(--text-dim);font-size:14px;margin-bottom:0.5rem;">Updated every day — redeem for free rewards</p>
-      <div class="code">100XWIN25233F2A80B3A48142BK100XWIN</div>
+      <div class="code">BDGWIN25233F2A80B3A48142BKBDGWIN</div>
     </section>
 
     <table class="info-table">
       <tbody>
-        <tr><td>App Name</td><td>100xwin App</td></tr>
+        <tr><td>App Name</td><td>BDG WIN App</td></tr>
         <tr><td>Total Games</td><td>500+ Games</td></tr>
         <tr><td>App Size</td><td>2.8 MB</td></tr>
       </tbody>
@@ -849,9 +894,9 @@
     <details class="toc-container">
       <summary class="toc-title">Table of Contents</summary>
       <ul class="toc-list">
-        <li><a href="#100xwin-gift">1. Daily Gift Code</a></li>
-        <li><a href="#what-is-100xwin">2. What is 100xwin?</a></li>
-        <li><a href="#what-makes-100xwin-different">3. What Makes 100xwin Different?</a></li>
+        <li><a href="#bdg-win-gift">1. Daily Gift Code</a></li>
+        <li><a href="#what-is-bdg-win">2. What is BDG WIN?</a></li>
+        <li><a href="#what-makes-bdg-win-different">3. What Makes BDG WIN Different?</a></li>
         <li><a href="#how-to-register">4. How to Register</a></li>
         <li><a href="#how-to-login">5. How to Login</a></li>
         <li><a href="#how-to-recharge">6. How to Recharge</a></li>
@@ -867,17 +912,17 @@
       </ul>
     </details>
 
-    <section id="what-is-100xwin" class="step-card">
-      <h2>What is 100xwin?</h2>
-      <p>100xwin is a colour prediction game where you can play online games and earn money. The game offers a wide range of games, including lottery games and colour prediction games on the same platform, so you do not have to download multiple apps.</p>
-      <img src="images/bdgcustomimage.jpg" alt="100xwin" class="content-image" width="500" height="500" loading="lazy" />
-      <p>The colourful and intuitive interface of the 100xwin app makes the gaming experience more fun and engaging for the users. Apart from this, you can now make unlimited money on this game if you make the right predictions and have a knack for colours.</p>
+    <section id="what-is-bdg-win" class="step-card">
+      <h2>What is BDG WIN?</h2>
+      <p>BDG WIN is a colour prediction game where you can play online games and earn money. The game offers a wide range of games, including lottery games and colour prediction games on the same platform, so you do not have to download multiple apps.</p>
+      <img src="images/bdgcustomimage.jpg" alt="BDG WIN" class="content-image" width="500" height="500" loading="lazy" />
+      <p>The colourful and intuitive interface of the BDG WIN app makes the gaming experience more fun and engaging for the users. Apart from this, you can now make unlimited money on this game if you make the right predictions and have a knack for colours.</p>
     </section>
 
-    <section id="what-makes-100xwin-different" class="step-card">
-      <h2>What Makes 100xwin Different?</h2>
-      <img src="images/BDG-Win-Colour-Prediction-Game.jpg" alt="100xwin Colour Prediction" class="content-image" width="1024" height="576" loading="lazy" />
-      <p>100xwin stands out in the crowded market of gaming apps due to its unique and compelling features:</p>
+    <section id="what-makes-bdg-win-different" class="step-card">
+      <h2>What Makes BDG WIN Different?</h2>
+      <img src="images/BDG-Win-Colour-Prediction-Game.jpg" alt="BDG WIN Colour Prediction" class="content-image" width="1024" height="576" loading="lazy" />
+      <p>BDG WIN stands out in the crowded market of gaming apps due to its unique and compelling features:</p>
       <ul>
         <li><b>Seamless User Experience:</b> Jump right into the action with a sleek, intuitive interface designed for both beginners and pros.</li>
         <li><b>Engaging Community:</b> Connect with fellow players, share achievements, and climb the leaderboards.</li>
@@ -887,11 +932,11 @@
     </section>
 
     <section id="how-to-register" class="steps-section">
-      <h2 class="section-title">How to Register for 100xwin</h2>
+      <h2 class="section-title">How to Register for BDG WIN</h2>
       <p class="centered-text">Create your account in minutes. Follow these simple steps.</p>
       <div class="step-card">
         <h3 id="register-click-on-button">Step 1: Click Register</h3>
-        <p>Click the Register button above. You will be redirected to the 100xwin registration portal.</p>
+        <p>Click the Register button above. You will be redirected to the BDG WIN registration portal.</p>
       </div>
       <div class="step-card">
         <h3 id="register-step-on-option">Step 2: Choose Register</h3>
@@ -910,7 +955,7 @@
     </section>
 
     <section id="how-to-login" class="steps-section">
-      <h2 class="section-title">How to Login to 100xwin</h2>
+      <h2 class="section-title">How to Login to BDG WIN</h2>
       <p class="centered-text">Log in to your account and start playing.</p>
       <div class="step-card">
         <h3 id="login-open-website">Step 1: Open App or Website</h3>
@@ -933,7 +978,7 @@
       <p class="centered-text">Add funds to your wallet with these easy steps.</p>
       <div class="step-card">
         <h3 id="recharge-game-login">Step 1: Login</h3>
-        <p>Log in to your 100xwin account.</p>
+        <p>Log in to your BDG WIN account.</p>
       </div>
       <div class="step-card">
         <h3 id="recharge-wallet-section">Step 2: Go to Wallet</h3>
@@ -962,7 +1007,7 @@
     </section>
 
     <section id="how-to-play" class="steps-section">
-      <h2 class="section-title">How to Play on 100xwin</h2>
+      <h2 class="section-title">How to Play on BDG WIN</h2>
       <p class="centered-text">Start playing after creating your account.</p>
       <div class="step-card">
         <h3 id="pay-game-login">Step 1: Login</h3>
@@ -1018,7 +1063,7 @@
     </section>
 
     <section id="types-of-games" class="step-card">
-      <h2>Games Available on 100xwin</h2>
+      <h2>Games Available on BDG WIN</h2>
       <img src="images/image_2024_06_06T09_21_25_290Z.webp" alt="Game types" class="content-image" loading="lazy" />
       <h3 id="type-fishing-game">Fishing Games</h3>
       <p>Enjoy Fashing Yilufa, Shade Dragons Fishing, Caishen Fishing, Dragon Fishing, Dragon Master, and All-Star Fishing.</p>
@@ -1043,7 +1088,7 @@
 
     <section id="refer-and-earn" class="step-card">
       <h2>Refer & Earn Program</h2>
-      <p>Earn extra cash by promoting 100xwin. Share your unique referral link and earn rewards for every successful download.</p>
+      <p>Earn extra cash by promoting BDG WIN. Share your unique referral link and earn rewards for every successful download.</p>
       <ul>
         <li>Open the app and log in.</li>
         <li>Go to Promotions section.</li>
@@ -1065,25 +1110,25 @@
 
     <section id="conclusion" class="step-card">
       <h2>Conclusion</h2>
-      <p>100xwin has rapidly gained popularity thanks to its user-friendly interface and extensive game selection. Registration is simple, and daily rewards keep you engaged. Start your winning journey today.</p>
+      <p>BDG WIN has rapidly gained popularity thanks to its user-friendly interface and extensive game selection. Registration is simple, and daily rewards keep you engaged. Start your winning journey today.</p>
     </section>
 
     <section class="faq-section" id="faq-section">
       <h2 class="section-title">Frequently Asked Questions</h2>
       <details>
-        <summary id="faq-register-100xwin">How to register for 100xwin?</summary>
+        <summary id="faq-register-bdg-win">How to register for BDG WIN?</summary>
         <div class="faq-answer"><p>Click the Register button on the homepage, enter your phone number and password, complete verification, and start playing.</p></div>
       </details>
       <details>
-        <summary id="faq-safe-and-secure">Is 100xwin safe?</summary>
+        <summary id="faq-safe-and-secure">Is BDG WIN safe?</summary>
         <div class="faq-answer"><p>Yes. We use advanced encryption to protect your data and transactions. The platform is monitored and updated regularly.</p></div>
       </details>
       <details>
-        <summary id="faq-bet-on-100xwin">How do I place a bet?</summary>
+        <summary id="faq-bet-on-bdg-win">How do I place a bet?</summary>
         <div class="faq-answer"><p>Select a game, choose an outcome, enter your bet amount, and confirm. Results appear in your dashboard.</p></div>
       </details>
       <details>
-        <summary id="faq-my-100xwin-account">How to deposit money?</summary>
+        <summary id="faq-my-bdg-win-account">How to deposit money?</summary>
         <div class="faq-answer"><p>Go to Deposit, choose your payment method (cards, wallets, UPI, bank transfer), enter the amount, and confirm.</p></div>
       </details>
       <details>
@@ -1105,7 +1150,7 @@
           <li><a href="predictions/">Predictions</a></li>
           <li><a href="responsible-gaming/">Responsible Gaming</a></li>
           <li><a href="become-an-agent/">Become An Agent</a></li>
-          <li><a href="https://100xwin.com/">100xwin</a></li>
+          <li><a href="https://bdgwin.live/">BDG WIN</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -1121,15 +1166,15 @@
       <div class="footer-section">
         <h3>Support</h3>
         <p>24/7 Customer Support</p>
-        <p>Email: <a href="/cdn-cgi/l/email-protection#7f0c0a0f0f100d0b3f1d1b18521c1a161e511e16">support@100xwin.com</a></p>
+        <p>Email: <a href="/cdn-cgi/l/email-protection#7f0c0a0f0f100d0b3f1d1b18521c1a161e511e16">support@bdgwin.live</a></p>
       </div>
       <div class="footer-section">
         <h3>About Us</h3>
-        <p>100xwin is your trusted platform for online gaming and entertainment, offering a wide range of games and opportunities.</p>
+        <p>BDG WIN is your trusted platform for online gaming and entertainment, offering a wide range of games and opportunities.</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 &middot; All Rights Reserved to <a href="">100xwin</a></p>
+      <p>&copy; 2026 &middot; All Rights Reserved to <a href="">BDG WIN</a></p>
     </div>
   </footer>
 
@@ -1163,7 +1208,23 @@
       const menuToggle = document.querySelector(".menu-toggle");
       const navMenu = document.querySelector(".nav-menu");
       menuToggle.addEventListener("click", () => { navMenu.classList.toggle("active"); });
+
+      const themeToggle = document.getElementById("themeToggle");
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+      themeToggle.textContent = savedTheme === "dark" ? "&#9788;" : "&#9789;";
+      themeToggle.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+        themeToggle.textContent = next === "dark" ? "&#9788;" : "&#9789;";
+      });
     });
   </script>
 </body>
 </html>
+
+
+
+
